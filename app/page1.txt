@@ -109,11 +109,24 @@ function Page() {
           {/* REMEMBER this container is also positioned set */}
           {/* will appear above the video and will take as much space */}
 
-          <DrumsContainer
-            lhCoords={leftHandCoords.current}
-            rhCoords={rightHandCoords.current}
-            constrainToParent={videoContainerRef}
-          />
+
+          <div className="top-0 left-0 absolute z-5 w-full h-full bg-blue-700/10 text-white flex items-center justify-center ">
+            DRUMS
+            <Drum
+              lhCoords={leftHandCoords.current}
+              rhCoords={rightHandCoords.current}
+              constrainToParent={videoContainerRef}
+            />
+            <Drum
+              initXPos={0}
+              initYPos={70}
+              lhCoords={leftHandCoords.current}
+              rhCoords={rightHandCoords.current}
+              constrainToParent={videoContainerRef}
+              flip={true}
+            />
+          </div>
+          
         </div>
 
         {/* hands */}

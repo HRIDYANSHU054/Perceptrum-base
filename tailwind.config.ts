@@ -8,13 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        screen: "100dvh",
+      },
+      minHeight: {
+        screen: "100dvh",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      scale: {
+        "-1": "-1",
+      },
     },
   },
+
   plugins: [],
 };
 export default config;
